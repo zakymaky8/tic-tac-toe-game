@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <dialog class="help-discr">
+            <div class="descr">
+                <h2>This is Tic Tac Toe Game</h2><br><br>
+                <p>1. Decide on How You May Play (with computer or friends <em style="color: #590a0a;">but You may not find "With me" option working for the time being</em>)</p><br>
+                <p>2. In the second Choose Your Mark('X' OR 'O')</p><br>
+                <p>3. Your mark is the mark on the side of <em>Your Name</em> </p>
+                <p>4. Attain 3-in-a-rows with your mark(horizontally or diagonally or vertically)</p><br>
+                <p>5. You can't swap your mark after scoring begins and before selecting the game type, If you want it, make sure on selecting your game type and restart the game, and then do what you want</p><br>
+                <p>6.Finally you won</p><br>
+                <button id="dialog-closer">Close</button>
+            </div>
+        </dialog>
+        <div id="help">
+            <img id="help-img" src="images/help.png" alt="help" title="help">
+        </div>
+        <h1 id='banner'>Tic Tac Toe</h1>
+        <figure id="tik-img">
+            <img src="images/tik.jpg" alt="game">
+        </figure>
+        <button id="embarker">Embark on the game</button>
+
+    </div>
+    <div class="game-container">
+        <h1 id="intiator-msg">Here we go!</h1>
+        <div class="game-type">
+            <label for="which-type">So how do you want to play?</label>
+            <select name="games" id="games">
+                <option disabled selected>Select One</option>
+                <option value="twos">With Friends</option>
+                <option value="one">With Me</option>
+            </select>
+        </div>
+        <div class="game-everything">
+            <div class="first-player">
+                <h2 id="player-name1">Player 1</h2>
+                <p>Score: <span id="score1">0</span></p>
+            </div>
+            <div class="marks">
+                <div id="mark1">O</div>
+                <div id="changer">swap</div>
+                <div id="mark2">X</div>
+            </div>
+            <div class="second-player">
+                <h2 id="player-name2">Player 2</h2>
+                <p>Score: <span id="score2">0</span></p>
+            </div>
+        </div>
+        <div class="game-board-grid">
+            <div class="cells"></div>
+            <div class="cells"></div>
+            <div class="cells"></div>
+            <div class="cells"></div>
+            <div class="cells"></div>
+            <div class="cells"></div>
+            <div class="cells"></div>
+            <div class="cells"></div>
+            <div class="cells"></div>
+        </div>
+        <button class="restart-btn">Restart</button>
+    </div>
+    <dialog class="notice">
+        <div id="notice-msg">Before we kick off the game,<br> make sure on selecting how <br>you want to play, for the game <br> to work in the intended way</div>
+    </dialog>
+    <dialog class="winner">
+        <div class="sth">
+            <div id="msg"></div><br>
+            <button class="restart-btn replay">Restart</button>
+        </div>
+    </dialog>
+
+    <script src="game.js"></script>
+</body>
+</html>

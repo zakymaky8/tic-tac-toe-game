@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    background: linear-gradient(245deg,
+    rgb(59, 51, 5,0.8),
+    rgb(14, 49, 49,0.8),
+    rgb(72, 15, 15,0.8),
+    rgb(9, 76, 9,0.8));
+    user-select: none;
+    height: 100vh;
+}
+figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 14px groove rgba(29, 105, 29, 0.5);
+}
+#banner {
+    color: rgb(10, 177, 155);
+    font-size: 40px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-evenly;
+    gap: 8%;
+    padding: 20px;
+}
+#tik-img {
+    min-width: 25%;
+    max-height: 50%;
+}
+#embarker,.restart-btn {
+    height: 10%;
+    min-width: 130px;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: rgb(0, 255, 47, 0.4);
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 5px;
+}
+#embarker:active {
+    background:  rgb(0, 255, 47);
+}
+#help {
+    align-self: flex-end;
+    margin-bottom: -15px;
+}
+#help img {
+    width: 40px;
+    border-radius: 50%;
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    color: rgb(10, 177, 155);
+    transform: translateY(-200%);
+}
+#intiator-msg,#banner {
+    font-size: 50px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+.game-everything {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    align-items: center;
+    gap: 20px;
+}
+.game-board-grid {
+    display: grid;
+    grid-template-columns: repeat(3,33.4%);
+    grid-template-rows: repeat(3,33.4%);
+    border: 10px groove rgb(7, 60, 58);
+    width: 300px;
+    height: 300px;
+    color: rgb(11, 137, 105);
+    border-radius: 15px;
+    font-weight: 1000;
+    -webkit-text-stroke: rgb(0, 0, 0) 2px;
+    background: rgb(64, 126, 105);
+}
+.game-board-grid > .cells{
+    border: 1px solid rgb(12, 24, 82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background: rgb(114, 133, 77);
+    box-sizing: border-box;
+}
+.game-board-grid > div:hover {
+    transform: scale(0.95,0.95);
+    perspective: 100px;
+    z-index: 2;
+    transition: all .3s;
+    border-radius: 10px;
+}
+.first-player,.second-player {
+    align-self: center;
+    text-align: center;
+}
+#games {
+    background: rgb(255, 255, 255,0);
+    border: none;
+    width: 130px;
+    margin-left: 15px;
+}
+.help-discr,.notice, .winner {
+    padding: 20px;
+    font-size: 13px;
+    width: 300px;
+    transform: translate(34vw,35vh);
+    background: rgb(64, 126, 105);
+    border-radius: 10px;
+    border: 6px groove rgb(171, 255, 46, .5);
+    box-shadow: inset black 3px 3px 4px 4px;
+}
+.help-discr {
+    transform: translate(34vw,18vh);
+    width: 390px;
+}
+.help-discr::backdrop,.notice::backdrop, .winner::backdrop {
+    background-color: rgb(0, 0, 0,.8);
+}
+.descr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgb(0, 0, 0)
+}
+#dialog-closer {
+    align-self: center;
+    padding: 2px;
+    margin-bottom: 10px;
+    background-color: rgb(0, 255, 47, 0.4);
+    border-radius: 50%;
+    width: 90px;
+    height: 40px;
+}
+#dialog-closer:hover {
+    background-color: rgb(0, 255, 47, 0.0)
+}
+.marks {
+    display: flex;
+    border: 2px solid rgb(73, 165, 124);
+    width: 190px;
+    align-items: center;
+    height: 30px;
+    justify-content: center;
+}
+.marks > div {
+    border: 1px solid rgb(93, 81, 81);
+    padding: 4px;
+    flex: 1 1 auto;
+    text-align: center;
+    background: #000;
+    cursor: pointer;
+}
+#changer {
+    color: rgb(247, 0, 255);
+    background-color: brown;
+}
+.sth {
+    margin-left: 16%;
+}
+.sth > div {
+    font-size: 20px;
+    color: rgb(0, 255, 247);
+    font-weight: 1000;
+}
+#winner-mark {
+    color: rgb(0, 255, 0);
+    font-size: 25px;
+}
+@media screen and (max-width: 510px) {
+    .help-discr,.notice, .winner {
+       transform: translate(10vw,35vh);
+    }
+    .help-discr {
+        width: 300px;
+        transform: translate(10vw,15vh);
+    }
+}
