@@ -1,2 +1,2 @@
 # tic-tac-toe-game
-I game built on the guidance of TOP
+A game built on the guidance of TOP
